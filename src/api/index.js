@@ -8,7 +8,7 @@ const getCategoryList = async(category) => {
 }
 
 const getCategoryDetail = async(id) => {
-  const { data } = await axios.get(`${id}.json?print=pretty`);
+  const { data } = await axios.get(`item/${id}.json?print=pretty`);
   return data;
 }
 
