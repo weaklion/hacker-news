@@ -35,11 +35,11 @@ const Detail = ({id}) => {
       ) : (
         <>
           <div> 제목 : {detail.title}</div>
-          <div> 타입 : {detail.type}</div>
-          <div> url :  <a href={detail.url}>{detail.url} </a></div>
-          <div> 날짜 : {converTime(detail.time)}</div>
-          <div> 점수 : {detail.score}</div>
           <div> by : {detail.by}</div>
+          <div> 타입 : {detail.type}</div>
+          <div> 날짜 : {converTime(detail.time)}</div>
+          <div> 조회수 : {detail.score}</div>
+          <div> url :  <a href={detail.url}>{detail.url} </a></div>
           <div style={{ overflowWrap : "break-word"}}> kids : { detail.kids ? detail.kids.join(',') : 'X'}</div>
         </>
       )}
