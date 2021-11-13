@@ -1,4 +1,17 @@
 .container {
   width : 100%;
-  
+}
+
+.container .loading-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

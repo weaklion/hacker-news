@@ -14,6 +14,7 @@ const Detail = ({id}) => {
 
   const converTime = (time) => {
     const date = new Date(time);
+    console.log(date);
 
     return (date.getDate()+
     "/"+(date.getMonth()+1)+
@@ -35,12 +36,11 @@ const Detail = ({id}) => {
         <>
           <div> 제목 : {detail.title}</div>
           <div> 타입 : {detail.type}</div>
-          <div> url : {detail.url}</div>
-          <div> 시간 : {converTime(detail.time)}</div>
+          <div> url :  <a href={detail.url}>{detail.url} </a></div>
+          <div> 날짜 : {converTime(detail.time)}</div>
           <div> 점수 : {detail.score}</div>
-          <div> id : {detail.id}</div>
           <div> by : {detail.by}</div>
-          <div> kids : {detail.kids.join(',')}</div>
+          <div style={{ overflowWrap : "break-word"}}> kids : { detail.kids ? detail.kids.join(',') : 'X'}</div>
         </>
       )}
     </div>
